@@ -104,11 +104,8 @@ header .container {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--light);
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    width: 200px;
+    height: 200px;
 }
 
 .desktop-nav a {
