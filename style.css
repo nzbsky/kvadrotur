@@ -189,11 +189,51 @@ header .container {
 /* Hero Section */
 .hero {
     position: relative;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-background .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-background .slide.active {
+    opacity: 1;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+.hero {
+    position: relative;
     top: 140px;
     height: 200vh;
-    min-height: 700px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('./img/holovna.jpg') no-repeat center center/cover;
+    min-height: 300px;
+ 
     display: flex;
     align-items: center;
     justify-content: center;

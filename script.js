@@ -118,3 +118,18 @@ document.getElementById("order-form").addEventListener("submit", function(e) {
         alert("Помилка: " + error.message);
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.hero-background .slide');
+    let currentSlide = 0;
+    
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    
+    // Змінюємо слайд кожні 5 секунд
+    setInterval(nextSlide, 3000);
+});
