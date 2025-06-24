@@ -188,10 +188,12 @@ header .container {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    position: relative;
+    top: 140px;
+    height: 200vh;
     min-height: 700px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+                url('./img/holovna.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -543,4 +545,7 @@ footer {
     .tab-btn {
         padding: 15px;
     }
+}
+.txt{
+    color: black;
 }

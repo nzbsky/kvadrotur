@@ -91,3 +91,30 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = '';
     });
 });
+document.getElementById("order-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Зупиняємо стандартну відправку
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Приховати форму
+            form.style.display = "none";
+            // Показати повідомлення
+            document.getElementById("thank-you-message").style.display = "block";
+        } else {
+            alert("Помилка при відправці форми. Спробуйте ще раз.");
+        }
+    })
+    .catch(error => {
+        alert("Помилка: " + error.message);
+    });
+});
