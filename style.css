@@ -396,7 +396,7 @@ header .container {
 .hero {
     position: relative;
     top: 140px;
-    height: 800px;
+    height: 600px;
     min-height: 300px;
  
     display: flex;
@@ -422,7 +422,7 @@ header .container {
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
